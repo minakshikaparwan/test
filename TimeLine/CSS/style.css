@@ -1,0 +1,135 @@
+.timeLiner{
+    position: relative;
+    overflow: hidden;
+}
+#newBtn{
+    text-align: center;
+    color:white;
+    background: rgb(238, 63, 63);
+}
+#newTLForm{
+    padding: 18px;
+    border-radius: 8px;
+    border:2px solid #cccccc;
+    background: white;
+}
+.flag{
+    background: white;
+}
+.tlElements{
+    padding: 18px;
+    border-radius: 8px;
+    border: 2px solid #cccccc;
+    color: rgb(232, 231, 231);
+}
+#save:before{
+    content: "\f0c7";
+    font-family: FontAwesome;
+    pointer-events: none;
+    top: 0rem;
+    z-index: 1;  
+}
+#del:after{
+    content: "\f014";
+    font-family: FontAwesome;
+    pointer-events: none;
+    top: 0rem;
+    z-index: 1;    
+}
+#edit:after{
+    content: "\f044";
+    font-family: FontAwesome;
+    pointer-events: none;
+    top: 0rem;
+    z-index: 1;    
+}
+
+.left{
+    border: 0px;
+    padding: 1rem;
+}
+.right{
+    border: 0px;
+    padding: 1rem;
+}
+
+.flag{
+    width: 200px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    border: 3px solid #cccccc;
+    border-radius: 5px;
+}
+.btn{
+    float: left;
+}
+.spine{
+    border-radius: 2px 2px 2px 2px; 
+    position: absolute;
+    top: 10%;
+    transition: bottom 0.5s linear 0s;
+    width: 4px;
+    left: 50%;
+    margin-left: -2px;
+    bottom: 0;
+    background-color: #CCCCCC;
+    z-index: -1;
+}
+.required{
+    color:red;
+    font-size: 20px;
+}
+.error{
+    border: 1px solid red;
+}
+
+@media screen and (min-width: 767px){
+    .left{
+        display: inline-block;
+        padding: 2rem;
+    }
+    .right{
+        padding: 3rem 2rem 1rem 2rem;
+        float:right;
+    }
+    .left .tlElements:after, .right .tlElements:before{
+        border-radius: 100% 100% 100% 100%;
+        content: "";
+        display: block;
+        height: 15px;
+        position: absolute;
+        right: -7px;
+        top: 50px;
+        width: 15px;
+        background-color: inherit;
+        border: 2px solid #FFFFFF;
+        box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.2);
+    }
+    .right .tlElements:before{
+        right: 0px;
+        left: -7px;
+        top: 41%;
+    }
+    .left .tlElements:hover:after, .right .tlElements:hover:before{
+        background-color: white;
+        border: 2px solid;
+        border-color: inherit;
+    }
+    .left .tlElements:before,.right .tlElements:after{
+        content: "";
+        display: block;
+        height: 0;
+        position: absolute;
+        left: 96%;
+        top: 29%;
+        width: 26px;
+        border-top: 1px dashed #CCCCCC; 
+    }
+    .right .tlElements:after{
+       
+        position: absolute;
+        left:7px;
+        top: 45%;  
+    }
+}
